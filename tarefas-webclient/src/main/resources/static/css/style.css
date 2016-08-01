@@ -1,0 +1,58 @@
+/*Tela grande*/
+@media (min-width: 768px) {
+
+	.panel-default {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	
+	.alert {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	
+ }
+
+.pagination {
+	margin-left: 10px;
+	margin-top: 2px;
+}	
+
+.cr-navbar {
+	background-color: rgb(40, 95, 173);
+}	
+
+.cr-navbar-brand {
+	padding-top: 0px;
+	padding-left: 10px;
+}	
+
+.cr-link-panel {
+ 	float: right;
+ 	padding: 0px;
+ 	margin-top: 0px;
+}
+
+.cr-span {
+ 	font-family: "showcard gothic"; 
+	font-size: 18px; 
+}
+
+.cr-thead{
+    background-color: rgb(120, 120, 120);
+    color: white;	
+}
+
+/*layout-links*/
+.btn-login {
+ 	margin-top: 30px;
+}
+
+.btn-entrar {
+ 	margin-top: 30px;
+}
+
+.msg-cadastro-finalizado {
+	margin-top: 20px;
+	margin-left: 20px;
+}

@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: tarefas-webclient
+Implementation-Version: 1.0.0-SNAPSHOT
+Built-By: craitz
+Implementation-Vendor-Id: com.camilo.tarefas
+Build-Jdk: 1.8.0_92
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+

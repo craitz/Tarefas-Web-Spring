@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"	
+	xmlns:layout="http://ultraq.net.nz/thymeleaf/layout">
+
+	<head>
+		<meta charset="UTF-8"/>
+		<meta http-equiv="Content-type" content="text/html; charset=UTF-8"/>
+		<meta name="viewport" content="width=device-width"/>
+		
+		<title>Titulo</title>
+		
+		<link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}"/>
+		<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+		<link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap-datepicker.standalone.min.css}"/>
+	</head>	
+
+	<body 
+		th:with="IMAGE_LINK='/images/task.png', 
+			CADASTRO_FORM_LINK='/cadastro',
+			CADASTRO_TAREFA_FORM_LINK='/tarefas/cadastro',
+			PESQUISA_TAREFA_LINK='/tarefas',
+			EXECUTA_CADASTRO_TAREFA_LINK='/tarefas',
+			HOME_LINK='/',
+			INDEX_LINK='/tarefas/index'">
+			
+		<nav class="navbar cr-navbar navbar-static-top">
+		  <div class="container-fluid cr-container-fluid"></div>
+		
+			 <div class="navbar-header cr-navbar-header">
+			 	<a class="navbar-brand cr-navbar-brand" href="#">
+					<img alt="Natacao" th:src="@{${IMAGE_LINK}}"/>
+				</a>
+			</div>
+			
+		</nav>
+
+ 		<span th:text="${logado}"></span>
+ 		<span th:text="${modo}"></span>
+		
+		<section layout:fragment="conteudo">
+			<p>Conteúdo principal</p>
+		</section>
+
+		<script th:src="@{/js/jquery-2.1.4.min.js}"></script>
+		<script th:src="@{/js/bootstrap.min.js}"></script>
+		<script th:src="@{/js/bootstrap-datepicker.min.js}"></script>
+		<script th:src="@{/js/bootstrap-datepicker.pt-BR.min.js}"></script>
+		<script th:src="@{/js/tarefas.js}"></script>
+		
+	</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://ultraq.net.nz/thymeleaf/layout">
+	<div class="alert alert-success" th:if="${!#strings.isEmpty(mensagemSucesso)}">
+		<div>
+			<p><span class="cr-span" th:text="${mensagemSucesso}"></span></p> 
+		</div>
+	</div>
+	<div class="alert alert-success" th:if="${!#strings.isEmpty(mensagemLocation)}">
+		<div>
+			<p><span class="cr-span">Sucesso no cadastro!</span></p> 
+		</div>
+		<div>
+			<b>Link para o recurso criado: </b> 
+			<i><span th:text="${mensagemLocation}"></span></i>
+		</div>
+	</div>
+	<div class="alert alert-danger" th:if="${!#strings.isEmpty(detalhesErro)}">
+		<div>
+			<p><span class="cr-span">Falha no cadastro!</span></p> 
+		</div>
+		<div>
+			<b>Descrição: </b> 
+			<i><span th:text="${detalhesErro.titulo}"></span></i>
+		</div>
+		<div>
+			<b>Código do erro: </b> 
+			<i><span th:text="${detalhesErro.status}"></span></i>
+		</div>
+		<div>
+			<b>Data da ocorrência: </b> 
+			<i><span th:text="${detalhesErro.timestamp}"></span></i>
+		</div>
+		<div>
+			<b>Mensagem do desenvolvedor: </b> 
+			<i><span th:text="${detalhesErro.mensagemDesenvolvedor}"></span></i>
+		</div>
+	</div>
+</html>

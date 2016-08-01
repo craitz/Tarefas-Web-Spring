@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout-links">
+	
+	<head>
+		<title>Página inicial</title>
+	</head>	
+
+	<section layout:fragment="conteudo">
+		<div class="jumbotron">
+		  <div class="container">
+			<h1>Bem-vindo ao Sistema Tarefas!</h1>
+			<div>
+				<h4><i>
+					Demonstração de aplicação Web Java com Spring MVC, Thymeleaf e Bootstrap,
+					que irá consumir uma API RESTFul num Web Service com Spring Data e Spring 
+					Security efetuando operações num banco de dados H2 com JPA + Hibernate.
+				</i></h4>
+			</div>
+			<div class="text-center">
+				<a th:href="@{${PESQUISA_TAREFA_LINK}}" class="btn btn-warning btn-entrar">
+					Ver lista de tarefas
+				</a>
+			</div>
+		  </div>
+		</div>
+	</section>
+</html>

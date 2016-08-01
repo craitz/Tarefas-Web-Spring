@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout-links">
+	
+	<head>
+		<title>Cadastro de Tarefas</title>
+	</head>	
+
+	<section layout:fragment="conteudo">
+		<form class="form-horizontal" method="POST" th:action="@{${EXECUTA_CADASTRO_TAREFA_LINK}}" th:object="${tarefa}">
+
+			<input class="cr-input-method" th:if="${operacao == 'insert'}" type="hidden" name="_method" value="POST"/>
+			<input class="cr-input-method" th:if="${operacao == 'update'}" type="hidden" name="_method" value="PUT"/>
+			
+			<div layout:include="mensagem"></div>
+
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<div class="clearfix">
+					
+						<span class="cr-span-titulo" th:if="${operacao == 'insert'}">Cadastrar tarefa</span>
+						<span class="cr-span-titulo" th:if="${operacao == 'update'}">Atualizar tarefa</span>
+						
+						<a class="btn btn-link cr-link-panel" 
+							th:href="@{${PESQUISA_TAREFA_LINK}}">Voltar para a lista de tarefas</a>
+					</div>
+				</div>		
+				
+				<div class="panel-body">
+					<input type="hidden" th:field="*{id}"/>
+					<input type="hidden" th:field="*{dataCadastro}"/>
+					<input type="hidden" th:field="*{dataFinalizacao}"/>
+					<input type="hidden" th:field="*{status}"/>
+					<div class="form-group">
+						<div class="col-sm-6">
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder="Digite a descrição da tarefa..."
+									autofocus="autofocus" th:field="*{descricao}"/>	
+								<span class="input-group-btn">
+									<button type="submit" class="btn btn-success" title="Salvar" rel="tooltip" 
+										data-placement="top">
+										<i class="glyphicon glyphicon-ok"></i>
+									</button>
+								</span>
+							</div>
+						</div>			
+					</div>
+				</div>
+			</div>			
+		</form>
+	</section>
+</html>
