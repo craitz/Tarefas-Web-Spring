@@ -5,3 +5,5 @@
 
 A aplicação consome uma API RESTful rodando num servidor *Apache Tomcat 8* que realiza
 operações numa base de dados H2 (ver https://github.com/craitz/Tarefas-API).
+
+![tarefas-web-spring.png](https://github.com/craitz/Tarefas-Web-Spring/blob/master/tarefas-web-spring.png)
